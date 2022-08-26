@@ -1,18 +1,15 @@
-'use strict'
+'use strict';
 
-const { default: mongoose } = require("mongoose")
+const mongoose = require('mongoose');
 
-var mongoose = require('mongoose');
-var Esquema = mongoose.Esquema;
-
-var UsuarioEsquema = Esquema({
-    nome: String,
-    sobrenome: String,
-    apelido: String,
-    email: String,
-    senha: String,
-    funcao: String,
-    imagem: String
+const UsuarioEsquema = mongoose.Schema({
+	nome: String,
+	sobrenome: String,
+	apelido: String,
+	email: String,
+	senha: String,
+	funcao: String,
+	imagem: String,
 });
 
-module.exports = mongoose.modelo('Usuario', UsuarioEsquema); 
+module.exports = mongoose.model('Usuario', UsuarioEsquema);
